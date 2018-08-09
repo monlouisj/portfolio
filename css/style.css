@@ -632,6 +632,12 @@ section.bl-expand .bl-icon-close {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-position: right center;
+}
+@media (min-width: 768px) {
+	.bl-main>section.topleft {
+		background-position: center center;
+	}
 }
 /* .bl-main>section.topleft:before {
 	position:absolute;
