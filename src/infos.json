@@ -1,0 +1,32 @@
+{
+    "title": "About Jeffrey MONLOUIS - fullstack developer",
+    "welcome": "Hi, I am",
+    "firstname": "Jeffrey",
+    "lastname" : "MONLOUIS",
+    "nationality": "French",
+    "worldcupwon": "⭐⭐",
+    "status": "available",
+    "phone": "+596696773081",
+    "email":"jeffreymonlouis@hotmail.com",
+    "country": "France",
+    "positions": ["a front-end developer", "a back-end developer", "a fullstack developer!"],
+    "spoken": "French, English",
+    "skype": "nelo_j",
+    "annees_experience": 8,
+    "introduction": ["I am a freelance fullstack developer currently employed at a web agency.", "I enjoy building UI with modern Javascript frameworks (❤Vue️JS), and I build back-ends based on Symfony PHP.", "If you have a project, or if you just want to talk tech, let's get in touch!"],
+    "github": "https://www.github.com/monlouisj",
+    "linkedin" : "https://www.linkedin.com/in/jeffrey-monlouis-9a0b7ba9",
+    "twitter": "https://twitter.com/nkg",
+    "portfolios": [
+        { "url": "http://prod.noviris.com/demo/multimarque3/index.html#voiture/ateca20", "title":"Multi-brand car showcase", "client":"SEAT",  "stack":"Vue JS", "img":"sgdm.jpg"},
+        { "url": "https://www.creolissime.com/", "title":"Ecommerce website", "client":"Eurogold", "stack":"Prestashop", "img":"creolissime.jpg"},
+        { "url": "http://smart.sgdmguadeloupe.com/web/", "title":"SMART car showcase", "client":"SMART", "stack":"Symfony PHP + MySQL, GSAP, Vue JS", "img":"smart.jpg"},
+        { "url": "http://ninadesiles.com/", "title":"Business website", "client":"Nina des iles", "stack":"Wordpress", "img":"ninadesiles.jpg"},
+        { "url": "http://playlists.communautecreative.fr", "title":"3D helix demo", "client":"demo", "stack":"Three JS", "img":"three.jpg"},
+        { "url": "http://sgdmguadeloupe.com/archives/gamme/web/", "title":"Seat car showcase", "client":"SEAT", "stack":"Symfony PHP + MySQL", "img":"seat.jpg"},
+        { "url": "http://sgdmguadeloupe.com/archives/e-tron/web/", "title":"Audi e-Tron", "client":"AUDI", "stack":"Symfony PHP + MySQL", "img":"etron.jpg"},
+        { "url": "http://demo.communautecreative.fr", "title":"Grid + filters demo", "client":"demo", "stack":"VueJS", "img":"grid.jpg"},
+        { "url": "https://www.twitter.com/guyanenews", "title":"Twitter Bot", "client":"demo", "stack":"NodeJS", "img":"guyanenews.jpg"}
+    ]
+
+}

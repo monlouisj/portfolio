@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:800" rel="stylesheet">
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.animatedheadline.css" />
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/skins/complement.css" />
+
+    <!-- Template JS Files -->
+    <script src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body class="dark">
+    <!-- Preloader Start -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- Preloader Ends -->
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+        <div id="bl-main" class="bl-main">
+            <!-- Top Left Section Starts -->
+            <section class="topleft">
+                <div class="bl-box row valign-wrapper">
+                    <div class="row valign-wrapper">
+                        <div class="title-heading">
+                            <div class="selector uppercase" id="selector">
+                                <h3 class="ah-headline p-none m-none">
+                                    <span class="font-weight-300">{{ welcome }}</span>
+                                    <span class="ah-words-wrapper">
+										<b class="is-visible">{{firstname ~" "~lastname}}</b>
+                                        {% for position in positions %}
+										<b>{{ position }}</b>
+                                        {% endfor %}
+									</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Top Left Section Ends -->
+            <!-- About Section Starts -->
+            <section>
+                <!-- About Title Starts -->
+                <div class="bl-box valign-wrapper">
+                    <div class="page-title center-align">
+                        <span class="title-bg">Resume</span>
+                        <h2 class="center-align">
+                            <span data-hover="About">About </span>
+                            <span data-hover="Me">Me</span>
+                        </h2>
+                    </div>
+                </div>
+                <!-- About Title Ends -->
+                <!-- About Expanded Starts -->
+                <div class="bl-content">
+                    <!-- Main Heading Starts -->
+                    {# <div class="container page-title center-align">
+                        <h2 class="center-align">
+                            <span data-hover="About">About </span>
+                            <span data-hover="Me">Me</span>
+                        </h2>
+                        <span class="title-bg">Resume</span>
+                    </div> #}
+                    <!-- Main Heading Ends -->
+                    <div class="container infos">
+						<!-- Divider Starts -->
+                        <div class="divider center-align">
+                            <span class="outer-line"></span>
+                            <span class="text-white">About me</span>
+                            <span class="outer-line"></span>
+                        </div>
+						<!-- Divider Ends -->
+						<!-- Personal Informations Starts -->
+                        <div class="row">
+							<!-- Picture Starts -->
+                            <div class="col s12 m5 l4 xl3 profile-picture">
+								<img src="images/photo-about.jpg" class="responsive-img my-picture" alt="My Photo">
+                            </div>
+							<!-- Picture Ends -->
+                            <div class="col s12 m7 l8 xl9 personal-info">
+                                <h6 class="uppercase"><i class="fa fa-user"></i> Who I am</h6>
+								<div class="col m12 l7 xl7 p-none">
+                                    <p class="second-font">
+                                    {% for sentence in introduction %}
+									{{ sentence }}</br>
+                                    {% endfor %}
+                                    </p>
+								</div>
+                                <div class="col s12 m12 l6 p-none">
+                                    <ul class="second-font list-1">
+                                        <li><span class="font-weight-600">First Name: </span>{{ firstname }}</li>
+                                        <li><span class="font-weight-600">Last Name: </span>{{ lastname }}</li>
+                                        <li><span class="font-weight-600">Nationality: </span>{{ nationality }}</li>
+										<li><span class="font-weight-600">Freelance: </span>{{ status }}</li>
+                                    </ul>
+                                </div>
+                                <div class="col s12 m12 l6 p-none">
+                                    <ul class="second-font list-2">
+                                        <li><span class="font-weight-600">Country: </span>{{ country }}</li>
+                                        <li><span class="font-weight-600">Email: </span>{{ email }}</li>
+                                        <li><span class="font-weight-600">Spoken Languages: </span>{{spoken}}</li>
+										<li><span class="font-weight-600">Skype: <a href="skype://{{skype}}?chat"></span>{{skype}}</li>
+                                    </ul>
+                                </div>
+                                {# <a href="#" class="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-500">
+									Download Resume <i class="fa fa-file-pdf-o"></i>
+								</a> #}
+								<a href="{{ github }}" class="col s12 m12 l4 xl4 btn btn-blog font-weight-500">
+									My Github page <i class="fa fa-github"></i>
+								</a>
+                            </div>
+                        </div>
+						<!-- Personal Informations Ends -->
+                    </div>
+					<!-- Resume Starts -->
+					
+					<!-- Resume Ends -->
+					<!-- Fun Facts Starts -->
+                    {# <div class="container badges">
+                        <div class="row">
+                            <!-- Fact Badge Item Starts -->
+                            <div class="col s12 m4 l4 center-align">
+                                <h3>
+                                    <i class="fa fa-suitcase"></i>
+									<span class="font-weight-700">{{annees_experience}}</span>
+                                </h3>
+                                <h6 class="uppercase font-weight-500">Years Experience</h6>
+                            </div>
+                            <!-- Fact Badge Item Ends -->
+                            <!-- Fact Badge Item Starts -->
+                            <div class="col s12 m4 l4 center-align">
+                                <h3>
+                                    <i class="fa fa-check-square"></i>
+									<span class="font-weight-700">89+</span>
+                                </h3>
+                                <h6 class="uppercase font-weight-500">Done Projects</h6>
+                            </div>
+                            <!-- Fact Badge Item Ends -->
+                            <!-- Fact Badge Item Starts -->
+                            <div class="col s12 m4 l4 center-align">
+                                 <h3>
+                                    <i class="fa fa-heart"></i>
+									<span class="font-weight-700">77+</span>
+                                </h3>
+                                <h6 class="uppercase font-weight-500">Happy customers</h6>
+                            </div>
+                            <!-- Fact Badge Item Ends -->
+                        </div>
+                    </div> #}
+					<!-- Fun Facts Ends -->
+                </div>
+                <!-- End Expanded About -->
+                <img alt="close" src="images/close-button.png" class="bl-icon-close" />
+            </section>
+            <!-- About Ends -->
+            <!-- Portfolio Starts -->
+            <section id="bl-work-section">
+				<!-- Portfolio Title Starts -->
+                <div class="bl-box valign-wrapper">
+                    <div class="page-title center-align">
+                        <span class="title-bg">works</span>
+                        <h2 class="center-align">
+                            <span data-hover="my">my </span>
+                            <span data-hover="portfolio">portfolio</span>
+                        </h2>
+                    </div>
+                </div>
+				<!-- Portfolio Title Ends -->
+                <!-- Portfolio Expanded Starts -->
+                <div class="bl-content">
+                    <!-- Main Heading Starts -->
+                    {# <div class="container page-title center-align">
+                        <h2 class="center-align">
+                            <span data-hover="my">my </span>
+                            <span data-hover="portfolio">portfolio</span>
+                        </h2>
+                        <span class="title-bg">works</span>
+                    </div> #}
+                    <!-- Main Heading Ends -->
+                    <div class="container">
+                        <!-- Divider Starts -->
+                        <div class="divider center-align">
+                            <span class="outer-line"></span>
+                            <span class="text-white" aria-hidden="true">My Portfolio</span>
+                            <span class="outer-line"></span>
+                        </div>
+                        <!-- Divider Ends -->
+                        <div class="row center-align da-thumbs" id="bl-work-items">
+                            <!-- Project Starts -->
+                            {% for project in portfolios %}
+                            <div class="col s12 m6 l3 xl3" data-panel="panel-{{ loop.index }}">
+                                <a href="{{ project.url }}">
+									<img class="responsive-img" src="images/projects/{{ project.img }}" alt="{{ project.title }}" />
+									<div class="valign-wrapper"><span class="font-weight-400 uppercase">{{ project.title }}</span></div>
+								</a>
+                            </div>
+                            {% endfor %}
+                            <!-- Project Ends -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Expanded Ends -->
+                <img alt="close" src="images/close-button.png" class="bl-icon-close" />
+            </section>
+            <!-- Portfolio Section Ends -->
+            <!-- Contact Section Starts -->
+            <section>
+				<!-- Contact Title Starts -->
+                <div class="bl-box valign-wrapper">
+                    <div class="page-title center-align">
+                        <span class="title-bg">Contact</span>
+                        <h2 class="center-align">
+                            <span data-hover="get">get </span>
+                            <span data-hover="in touch">in touch</span>
+                        </h2>
+                    </div>
+                </div>
+				<!-- Contact Title Ends -->
+                <!-- Expanded Contact Starts -->
+                <div class="bl-content">
+                    <!-- Main Heading Starts -->
+                    {# <div class="container page-title center-align">
+                        <h2 class="center-align">
+                            <span data-hover="get">get </span>
+                            <span data-hover="in touch">in touch</span>
+                        </h2>
+						<span class="title-bg">Contact</span>
+                    </div> #}
+                    <!-- Main Heading Ends -->
+                    <div class="container">
+                        <!-- Divider Starts -->
+                        <div class="divider center-align">
+                            <span class="outer-line"></span>
+                            <span class="text-white" aria-hidden="true">Get in touch</span>
+                            <span class="outer-line"></span>
+                        </div>
+                        <!-- Divider Ends -->
+                        <div class="row contact">
+							<!-- Contact Infos Starts -->
+                            <div class="col s12 m6 l4 xl4 leftside">
+								<!-- Contacts Starts -->
+                                <h6 class="font-weight-500 uppercase">Skype</h6>
+                                <span class="font-weight-400 second-font"><i class="fa fa-phone"></i> {{ skype }}</span>
+								<h6 class="font-weight-500 uppercase">Email</h6>
+								<span class="font-weight-400 second-font"><i class="fa fa-envelope"></i> {{ email }}</span>
+								<!-- Contacts Ends -->
+								<!-- Social Media Profiles Starts -->
+                                <h6 class="font-weight-500 uppercase">Social Profiles</h6>
+                                <div class="social">
+                                    <ul class="list-inline social social-intro center-align p-none">
+                                        <li class="twitter"><a href="{{ twitter }}"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="linkedin"><a href="{{ linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+								<!-- Social Media Profiles Ends -->
+                            </div>
+							<!-- Contact Infos Ends -->
+							<!-- Contact Form Starts -->
+                            <div class="col s12 m6 l8 xl8 rightside">
+								<h6 class="uppercase m-none">Feel free to drop me a line</h6>
+								<div class="row">
+									<p class="col s12 m12 l7 xl7 second-font">
+										Let's talk about your project! I love reading things and talk tech, so hit the button below.
+									</p>
+								</div>
+								<div class="row">
+                                    <div class="col s12 m12 l4 xl4 submit-form">
+                                        <a target="_blank" href="https://help.communautecreative.fr/livechat" class="btn btn-blog font-weight-500">
+                                            LET'S CHAT <i class="fa fa-comments"></i>
+                                        </a>
+                                    </div>
+								</div>
+                                {# <form class="contactform" method="post" action="php/process-form.php">
+                                    <!-- Name Field Starts -->
+                                    <div class="input-field second-font">
+                                        <i class="fa fa-user prefix"></i>
+                                        <input id="name" name="name" type="text" class="validate" required>
+                                        <label class="font-weight-400" for="name">Your Name</label>
+                                    </div>
+                                    <!-- Name Field Ends -->
+                                    <!-- Email Field Starts -->
+                                    <div class="input-field second-font">
+                                        <i class="fa fa-envelope prefix"></i>
+                                        <input id="email" type="email" name="email" class="validate" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                    <!-- Email Field Ends -->
+                                    <!-- Start Message Textarea Starts -->
+                                    <div class="input-field second-font">
+                                        <i class="fa fa-comments prefix"></i>
+                                        <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                                        <label for="message">Your message</label>
+                                    </div>
+                                    <!-- Message Textarea Ends -->
+									<!-- Submit Form Button Starts -->
+                                    <div class="col s12 m12 l4 xl4 submit-form">
+                                        <button class="btn font-weight-500" type="submit" name="send">
+											Send Message <i class="fa fa-send"></i>
+										</button>
+                                    </div>
+                                    <!-- Submit Form Button Ends -->
+                                    <div class="col s12 m12 l8 xl8 form-message">
+                                        <span class="output_message center-align font-weight-500 uppercase"></span>
+                                    </div>
+                                </form> #}
+                            </div>
+                            <!-- Contact Form Ends -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Expanded Contact Ends -->
+                <img alt="close" src="images/close-button.png" class="bl-icon-close" />
+            </section>
+            <!-- Contact Section Ends -->
+            <!-- Portfolio Panel Items Starts -->
+            <div class="bl-panel-items" id="bl-panel-work-items">
+                {% for project in portfolios %}
+				<!-- Project Starts -->
+                <div data-panel="panel-{{ loop.index }}">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <img class="responsive-img" src="images/projects/{{ project.img }}" alt="{{ project.title }}" />
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">{{ project.title }}</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">{{ project.client }}</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">{{ project.stack}}</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a target="_blank" href="{{ project.url }}" class="waves-effect waves-light btn font-weight-500">Open <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+                {% endfor %}
+				<!-- Project Starts -->
+                {#<div data-panel="panel-2">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <div class="carousel carousel-slider">
+                                <a class="carousel-item" href="#one!"><img class="responsive-img" src="images/projects/project-2.jpg" alt="project" ></a>
+                                <a class="carousel-item" href="#two!"><img class="responsive-img" src="images/projects/project-1.jpg" alt="project" ></a>
+                                <a class="carousel-item" href="#three!"><img class="responsive-img" src="images/projects/project-3.jpg" alt="project" ></a>
+                                <a class="carousel-item" href="#four!"><img class="responsive-img" src="images/projects/project-4.jpg" alt="project" ></a>
+                            </div>
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Slider Project</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">Themeforest</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">php, html, css, javascript</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+				<!-- Project Starts -->
+                <div data-panel="panel-3">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <div class="videocontainer">
+                                <iframe class="youtube-video" src="https://www.youtube.com/embed/7e90gBu4pas?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Youtube Video</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">Photodune</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">Adobe After Effects, Adobe Audition</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+				<!-- Project Starts -->
+                <div data-panel="panel-4">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <video id="video" class="responsive-video" controls poster="images/projects/video/video-poster.png">
+								<source src="images/projects/video/video.mp4" type="video/mp4">
+							</video>
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Local Video</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">Videohive</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">Adobe After Effects, Movie Maker</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+				<!-- Project Starts -->
+                <div data-panel="panel-5">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <img src="images/projects/project-5.jpg" alt="project" />
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Image Project</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">Graphicriver</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">Adobe Photoshop, Gimp</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+				<!-- Project Starts -->
+                <div data-panel="panel-6">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <img src="images/projects/project-6.jpg" alt="project" />
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Image Project</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">Activeden</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">Adobe Flash, Paint</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+				<!-- Project Starts -->
+                <div data-panel="panel-7">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <img src="images/projects/project-7.jpg" alt="project" />
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Image Project</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">3D Ocean</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">3DS Max, Adobe Photoshop</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>
+				<!-- Project Ends -->
+				<!-- Project Starts -->
+                <div data-panel="panel-8">
+                    <div class="row">
+                        <!-- Project Main Content Starts -->
+                        <div class="col s12 l6 xl6">
+                            <img src="images/projects/project-8.jpg" alt="project" />
+                        </div>
+                        <!-- Project Main Content Ends -->
+                        <!-- Project Details Starts -->
+                        <div class="col s12 l6 xl6">
+                            <h3 class="font-weight-600 white-text uppercase">Image Project</h3>
+                            <ul class="project-details white-text second-font">
+                                <li><i class="fa fa-user"></i><span class="font-weight-600"> Client </span>: <span class="font-weight-400 uppercase">Audiojungle</span></li>
+                                <li><i class="fa fa-calendar"></i><span class="font-weight-600"> Date </span>: <span class="font-weight-400 uppercase">02/11/2017</span></li>
+                                <li><i class="fa fa-cogs"></i> <span class="font-weight-600"> Used Technologies</span> : <span class="font-weight-400 uppercase">Adobe Audition, Adobe Premiere</span></li>
+                            </ul>
+                            <hr>
+                            <p class="white-text second-font">Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                            <a href="#" class="waves-effect waves-light btn font-weight-500">Preview <i class="fa fa-external-link"></i></a>
+                        </div>
+                        <!-- Project Details Ends -->
+                    </div>
+                </div>#}
+				<!-- Project Ends -->
+                <!-- Portfolio Navigation Starts -->
+                <nav>
+                    <!-- Previous Work Icon Starts -->
+                    <span class="control-button bl-previous-work uppercase font-weight-700"><i class="fa fa-chevron-left"></i></span>
+                    <!-- Previous Work Icon Ends -->
+                    <!-- Close Work Icon Starts -->
+                    <span class="control-button fa fa-close fa-2x bl-icon-close center-align" id="bl-icon-close"></span>
+                    <!-- Close Work Icon Ends -->
+                    <!-- Next Work Icon Starts -->
+                    <span class="control-button bl-next-work uppercase font-weight-700"><i class="fa fa-chevron-right"></i></span>
+                    <!-- Previous Work Icon Ends -->
+                </nav>
+                <!-- Portfolio Navigation Ends -->
+            </div>
+            <!-- Portfolio Panel Items Ends -->
+        </div>
+    </div>
+    <!-- Wrapper Ends -->
+
+    <!-- Template JS Files -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.animatedheadline.js"></script>
+    <script src="js/boxlayout.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- Start of Rocket.Chat Livechat Script -->
+    <script type="text/javascript">
+    (function(w, d, s, u) {
+        w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+        var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+        j.async = true; j.src = 'https://help.communautecreative.fr/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
+        h.parentNode.insertBefore(j, h);
+    })(window, document, 'script', 'https://help.communautecreative.fr/livechat');
+    </script>
+    <!-- End of Rocket.Chat Livechat Script -->
+</body>
+
+</html>
