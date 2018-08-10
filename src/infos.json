@@ -26,7 +26,8 @@
         { "url": "http://sgdmguadeloupe.com/archives/gamme/web/", "title":"Seat car showcase", "client":"SEAT", "stack":"Symfony PHP + MySQL", "img":"seat.jpg"},
         { "url": "http://sgdmguadeloupe.com/archives/e-tron/web/", "title":"Audi e-Tron", "client":"AUDI", "stack":"Symfony PHP + MySQL", "img":"etron.jpg"},
         { "url": "http://demo.communautecreative.fr", "title":"Grid + filters demo", "client":"demo", "stack":"VueJS", "img":"grid.jpg"},
-        { "url": "https://www.twitter.com/guyanenews", "title":"Twitter Bot", "client":"demo", "stack":"NodeJS", "img":"guyanenews.jpg"}
+        { "url": "https://www.twitter.com/guyanenews", "title":"Twitter Bot", "client":"demo", "stack":"NodeJS", "img":"guyanenews.jpg"},
+        { "url": "http://newsletter.noviris.com/news-destreland-nature/index.html", "title":"Responsive emailing", "client":"Destreland", "stack":"HTML CSS", "img":"emailing.jpg"}
     ]
 
 }
