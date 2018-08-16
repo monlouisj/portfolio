@@ -30,6 +30,9 @@
     <!-- Preloader Ends -->
     <!-- Wrapper Starts -->
     <div class="wrapper">
+        <!-- skype btn hover -->
+        <span class="skype-button rectangle bottom-right" data-contact-id="nelo_j" data-text="LET'S CHAT !"></span>
+
         <div id="bl-main" class="bl-main">
             <!-- Top Left Section Starts -->
             <section class="topleft">
@@ -300,9 +303,7 @@
 								</div>
 								<div class="row">
                                     <div class="col s12 m12 l4 xl4 submit-form">
-                                        <a target="_blank" href="https://help.communautecreative.fr/livechat" class="btn btn-blog font-weight-500">
-                                            LET'S CHAT <i class="fa fa-comments"></i>
-                                        </a>
+                                        <span class="skype-button rectangle" data-contact-id="nelo_j" data-text="LET'S CHAT !"></span>
                                     </div>
 								</div>
                                 
@@ -587,16 +588,7 @@
     <script src="js/materialize.min.js"></script>
     <script src="js/jquery.hoverdir.js"></script>
     <script src="js/custom.js"></script>
-    <!-- Start of Rocket.Chat Livechat Script -->
-    <script type="text/javascript">
-    (function(w, d, s, u) {
-        w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
-        var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-        j.async = true; j.src = 'https://help.communautecreative.fr/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
-        h.parentNode.insertBefore(j, h);
-    })(window, document, 'script', 'https://help.communautecreative.fr/livechat');
-    </script>
-    <!-- End of Rocket.Chat Livechat Script -->
+    <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
 </body>
 
 </html>
