@@ -18,6 +18,7 @@
     "linkedin" : "https://www.linkedin.com/in/jeffrey-monlouis-9a0b7ba9",
     "twitter": "https://twitter.com/nkg",
     "portfolios": [
+        { "url": "http://signature.communautecreative.fr/", "title":"Email signature generator", "client":"Demo",  "stack":"Vue JS", "img":"signature.png"},
         { "url": "http://terra-group.com/test-de-personnalite/index.html", "title":"Multi-step survey", "client":"TERRA Group",  "stack":"Vue JS", "img":"terra.jpg"},
         { "url": "http://prod.noviris.com/demo/multimarque3/index.html#voiture/ateca20", "title":"Multi-brand car showcase", "client":"SEAT",  "stack":"Vue JS", "img":"sgdm.jpg"},
         { "url": "https://www.creolissime.com/", "title":"Ecommerce website", "client":"Eurogold", "stack":"Prestashop", "img":"creolissime.jpg"},
